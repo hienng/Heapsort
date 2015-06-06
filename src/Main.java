@@ -7,7 +7,7 @@
 import sort.heap.*;
 import java.util.Arrays;
 
-public class Main extends HeapSort {
+public class Main extends MinHeapSort {
 
     public static void main(String[] args) {
         int[] arr = {4, 0, 7, 2, 8, 1};
