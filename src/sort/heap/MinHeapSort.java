@@ -8,7 +8,7 @@ package sort.heap;
 
 import sort.Sort;
 
-public class HeapSort extends Sort {
+public class MinHeapSort extends Sort {
     public static void sort(int [] arr) {
         // build a heap
         generateHeap(arr);
@@ -38,26 +38,26 @@ public class HeapSort extends Sort {
         int childLeft = childLeft(parent);
         int childRight = childRight(parent);
 
-        int maxChild;
+        int minChild;
 
         // if 2 children exists
         if(childRight < n) {
-            // get the largest of both
+            // get the smallest of both
             if(arr[childLeft] < arr[childRight]) {
-                maxChild = childRight;
+                minChild = childLeft;
             } else {
-                maxChild = childLeft;
+                minChild = childRight;
             }
             // if heap property not satisfied
-            if(arr[parent] < arr[maxChild]) {
+            if(arr[parent] > arr[minChild]) {
                 // heapify
-                swap(arr, maxChild, parent);
-                percolate(arr, maxChild, n);
+                swap(arr, minChild, parent);
+                percolate(arr, minChild, n);
             }
-        // if there is only leftChild
+            // if there is only leftChild
         } else if (childLeft < n) {
             // if heap property not satisfied
-            if(arr[parent] < arr[childLeft]) {
+            if(arr[parent] > arr[childLeft]) {
                 // swap -> heapify
                 swap(arr, childLeft, parent);
             }

@@ -1,10 +1,19 @@
-import sort.heap.HeapSort;
+/*
+    Autor: Hien Nguyen, Informatik 1 Java - Klausurvorbereitung
+    Sortieralgorithmen: Heapsort;
+    Control Flow statements: if, for, recursion, ...
+ */
+
+import sort.heap.*;
+import java.util.Arrays;
 
 public class Main extends HeapSort {
 
     public static void main(String[] args) {
-        System.out.print("Hello World");
         int[] arr = {4, 0, 7, 2, 8, 1};
+        System.out.println(Arrays.toString(arr));
+
         sort(arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
