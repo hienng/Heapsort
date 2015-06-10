@@ -16,7 +16,7 @@ public class HeapSort extends Sort {
         sortHeap(arr);
     }
 
-    public static void generateHeap(int[] arr) {
+    private static void generateHeap(int[] arr) {
         // all nodes except leafs
         for(int i = arr.length / 2; i >= 0; i--) {
             // percolate nodes through whole tree
@@ -24,7 +24,7 @@ public class HeapSort extends Sort {
         }
     }
 
-    public static void sortHeap(int[] arr) {
+    private static void sortHeap(int[] arr) {
         // elements after i are already sorted, therefore no need to be heapified
         for(int i = arr.length - 1; i > 0; i--) {
             // swap last tree node to root
@@ -34,7 +34,7 @@ public class HeapSort extends Sort {
         }
     }
 
-    public static void percolate(int[] arr, int parent, int n) {
+    private static void percolate(int[] arr, int parent, int n) {
         int childLeft = childLeft(parent);
         int childRight = childRight(parent);
 
