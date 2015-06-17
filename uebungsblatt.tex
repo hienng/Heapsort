@@ -1,0 +1,125 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{etex}
+\usepackage{fancyhdr}
+\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{pifont}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{stmaryrd}
+\usepackage{tabu}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{struktex}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{upgreek}
+\usepackage{tikz}
+\usepackage{marvosym}
+\usepackage{bussproofs}
+\usepackage{multirow}
+\usepackage{bigdelim}
+\usepackage{tikz-qtree}
+\usetikzlibrary{positioning}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Sortieralgorithmen - Heapsort}
+\newcommand{\Name}{Hien Nguyen}
+%\newcommand{\Matrikelnummer}{3746594 \& ???}
+%\newcommand{\Fachsemester}{6}
+\newcommand{\Semester}{Abgabe: 24.06.2015}
+\newcommand{\Uebungsblatt}{} %  <-- UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength{\parindent}{0em}
+\topmargin -1.0cm
+\oddsidemargin 0cm
+\evensidemargin 0cm
+\setlength{\textheight}{9.2in}
+\setlength{\textwidth}{6.0in}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+	{
+		\vspace*{0.5cm}
+		\textsf{\textbf{Aufgabe #1}}
+		\vspace*{0.2cm}
+		
+	}
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+	pdftitle={\Fach{}: "Ubungsblatt \Uebungsblatt{}},
+	pdfauthor={\Name},
+	pdfborder={0 0 0}
+}
+
+\lstset{ %
+	language=java,
+	basicstyle=\footnotesize\tt,
+	showtabs=false,
+	tabsize=2,
+	captionpos=b,
+	breaklines=true,
+	extendedchars=true,
+	showstringspaces=false,
+	flexiblecolumns=true,
+}
+
+\title{"Ubungsblatt \Uebungsblatt{}}
+\author{\Name{}}
+
+\begin{document}
+	\thispagestyle{fancy}
+	\lhead{\sf \large \Fach{} \\ \small \Name{} }%- \Matrikelnummer{}}
+	\rhead{\sf \Semester{} \\ }%Fachsemester \Fachsemester{}}
+	\vspace*{0.2cm}
+	\begin{center}
+		\LARGE \sf \textbf{"Ubungsblatt \Uebungsblatt{}}
+	\end{center}
+	\vspace*{0.2cm}
+	
+	% % % % % % % % %
+	\renewcommand{\labelenumi}{\alph{enumi})}
+	\renewcommand{\labelenumii}{\arabic{enumii})}
+	\newcommand{\aeq}{%	
+		\mathrel{\reflectbox{\rotatebox[origin=c]{0}{$\models$}}}} 
+	
+	% % % % % % % %
+	\Aufgabe{1. generateHeap}
+	Gegeben ist im folgenden eine Zahlenfolge, erzeugen Sie einen Min-Heap und geben ihre Schritte stichwortartig an.
+\begin{table}[h]
+\centering
+\begin{tabular}{lllllll}
+7 & 3 & 5 & 5 & 6 & 0 & 8
+\end{tabular}
+\end{table}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\Aufgabe{2. sortHeap}
+Sortieren Sie schrittweise, den aus Aufgabe 1 erzeugten Min-Heap.
+Falls Sie sich nicht sicher sind, nehmen sie diesen Min-Heap:
+\begin{table}[h]
+\centering
+\begin{tabular}{lllllll}
+0 & 3 & 5 & 5 & 6 & 7 & 8
+\end{tabular}
+\end{table}\\\\\\\\\\\
+
+\Aufgabe{(Zusatz) Min-Heap Implementation}
+Laden Sie sich von der Moodle Plattform die Quelldateien runter und Implementieren Sie einen MinHeap.
+\end{document}
