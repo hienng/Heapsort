@@ -26,7 +26,7 @@ public class HeapSort extends Sort {
 
     private static void sortHeap(int[] arr) {
         // elements after i are already sorted, therefore no need to be heapified
-        for(int i = arr.length - 1; i > 0; i--) {
+        for(int i = arr.length - 1; i >= 1 ; i--) {
             // swap last tree node to root
             swap(arr, 0, i);
             // percolate root
